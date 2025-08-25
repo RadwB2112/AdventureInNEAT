@@ -1,0 +1,104 @@
+
+[NEAT]
+fitness_criterion = max
+fitness_threshold = 20000.0
+no_fitness_termination = False
+pop_size = 20
+reset_on_extinction = False
+
+# max - we use the best individual in each gen, mean - use average of the population, min
+# a landing its +1000 and +1 for survive so (max_steps = 10.000) -> 10.000 + 1000 for win = 11.000 points, 12.000 max
+# if we use distance and angle reward + 5000 + 2000 = + 7000 = 19.000 + others ~20k
+
+# default for False
+# num of individuals in each gen
+# False -> if each of them die -> continue, True -> reset fresh
+
+
+
+[DefaultGenome]
+
+# Network shape --------- num_inputs should match the get_state() output --------
+num_inputs  = 5
+num_outputs = 3
+num_hidden = 0
+# no hidden layers at start
+
+feed_forward = True
+initial_connection = partial_direct 0.5
+# ----- or --------- full
+
+# Activation --------------------------------------------------------------------
+# 0.0 -> for stability, to eliminate randomness behaviors
+activation_default = sigmoid
+activation_mutate_rate = 0.0
+activation_options = sigmoid
+
+aggregation_default = sum
+aggregation_mutate_rate = 0.0
+aggregation_options = sum
+
+response_init_mean = 1.0
+response_init_stdev = 0.0
+response_max_value = 30.0
+response_min_value = -30.0
+response_replace_rate = 0.0
+
+response_mutate_power = 0.5
+response_mutate_rate = 0.1
+# before it was 0.0 at both
+
+
+# Weights and Biases ------------------------------------------------------------
+
+# before i had weight max/min values at +- 30
+weight_init_mean = 0.0
+weight_init_stdev = 1.0
+weight_max_value = 15
+weight_min_value = -15
+weight_mutate_power = 0.5
+weight_mutate_rate = 0.8
+weight_replace_rate = 0.1
+
+bias_init_mean = 0.0
+bias_init_stdev = 1.0
+bias_max_value = 30.0
+bias_min_value = -30.0
+bias_mutate_power = 0.5
+bias_mutate_rate = 0.7
+bias_replace_rate = 0.1
+
+
+# Structural mutation -----------------------------------------------------------
+mutation_rate = 0.5
+
+conn_add_prob = 0.4
+conn_delete_prob = 0.2
+
+node_add_prob = 0.2
+node_delete_prob = 0.1
+
+enabled_default = True
+enabled_mutate_rate = 0.1
+
+
+# Speciation --------------------------------------------------------------------
+compatibility_disjoint_coefficient = 1.0
+compatibility_weight_coefficient = 0.5
+
+
+[DefaultSpeciesSet]
+compatibility_threshold = 3.0
+
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation       = 15
+species_elitism      = 1
+
+
+[DefaultReproduction]
+elitism              = 2
+survival_threshold   = 0.3
+
+
