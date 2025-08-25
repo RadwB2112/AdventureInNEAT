@@ -1,26 +1,19 @@
-# <center>🚀 Realistic Ship Simulator with AI & NEAT 🚀  </center> 
+# <p align="center"> 🚀 Realistic Ship Simulator with AI & NEAT 🚀  </p> 
 
-**Adventure in NEAT / Space** is an experimental and interactive project where a spaceship learns how to **land safely on a platform** using **neuroevolution**!
 
----
-## <center> Project Overview </center>
+**Adventure in NEAT / Space** is an experimental and interactive project where a spaceship learns how to **land safely on a platform** using **neuroevolution**!  
+
+---  
+## <p align="center"> Project Overview </p>
 This project is a **realistic 2D spaceship simulator** powered by **real physics** and **neuroevolution (NEAT)**.  
 I implemented **continuous physics**, including thrust, rotation, gravity, drag, and realistic black hole attraction, combined with **AI-driven neural networks** to evolve autonomous ships that learn to navigate and land safely.  
 
 The project spans **~1500 lines of code** and was built to simulate real-life physics as closely as possible while providing an **AI training environment** with **hands-on control**.  
 It’s also a **remake of an older version**, where you could only manually navigate the ship through blank space with nothing else. This remake allows exploration of **neuroevolution** and interactive AI learning.
 
-<html>
-<center>
-<span style="opacity: 0.4;">
- please note that some parts of the code include comments and words in Romanian, mostly because i started this project as a kid and it was more easy for me to understand the code then
-</span>
-</center>
-</html>
+> please note that some parts of the code contain comments and words in Romanian, mostly because I started this project as a kid and it was easier to understand the code that way.  
 
----
-
-## <center> Features  </center> 
+## <p align="center"> Features  </p> 
 
 - **AI Learning with NEAT:** Ships evolve over generations to land safely using fitness-based rewards.
 - **Manual Control Mode:** Navigate the ship yourself with smooth thrust and rotation physics.
@@ -37,8 +30,8 @@ It’s also a **remake of an older version**, where you could only manually navi
     - **`T`** → go to NEAT train mode.  
     - **`Space`** → go to manual navigation mode.  
     - **`B`** → show best genome’s landing path (after training).
-- **Genome Fitness System:** Rewards are designed to encourage realistic AI behavior and landing:
-  ```text
+- **Genome Fitness System:** Rewards are designed to encourage realistic AI behavior and landing:  
+  ```text  
   DEAD_SHIP = 10             # ship died
   ONLY_UP_SHIP = 20          # penalize ships that just go up slowly
   SURVIVE_SHIP = 0.1         # small reward for surviving
@@ -53,22 +46,21 @@ It’s also a **remake of an older version**, where you could only manually navi
   - **Normal stars**: Two colors, appear and disappear randomly to simulate a twinkling sky.  
   - **Falling stars**: Two categories — bright white shooting stars and meteorites — adding a **realistic space environment** while ships navigate and train.  
 
----
-## <center> Technologies Used </center>
+
+## <p align="center"> Technologies Used </p>  
   ```text
 - Python 3.11.5 
 - Pygame – Graphics, physics, and input handling
 - NEAT-Python – Neuroevolution for AI-controlled ships
 - Object-Oriented Programming (OOP) – Modular classes for stars, ships, platforms, and black holes
 - Git – Version control for project management
-```
----
+```  
 
-## <center> Installation & Running </center>
+## <p align="center"> Installation & Running </p>
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/RadwB2112/AdventureInNEAT | cd ship_ai_neat
+git clone https://github.com/RadwB2112/AdventureInNEAT | cd AdventureInNEAT
 ```
 2. **Install all the packages**
 ```bash
@@ -78,8 +70,8 @@ pip install -r requirements.txt
 ```bash
 python main.py
 ```
----
-## <center> Customization & Configuration </center>
+
+## <p align="center"> Customization & Configuration </p>
 
 This project is designed to be **highly configurable**. You can experiment with AI, ship, and environment parameters by only changing some values.
 
