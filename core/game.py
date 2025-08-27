@@ -347,7 +347,7 @@ def eval_generation2(genomes, config):
             ship.update_ai(outputs[0], outputs[1], outputs[2], screen, platforms, bhs)
 
             if steps >= 210 and abs(ship.x - ships_positions[i]) < 2:  # if they just go up, i kill them
-                print(f"ship.x_corner: {ship.x}, ships_pos[i]: {ships_positions[i]}")
+                # print(f"ship.x_corner: {ship.x}, ships_pos[i]: {ships_positions[i]}")
                 ship.dead = True
                 genome.fitness -= ONLY_UP_SHIP
 
@@ -365,7 +365,7 @@ def eval_generation2(genomes, config):
             else:
                 dist_reward = max(-MAX_DIST_REWARD_FRAME, DIST_REWARD_SCALE * delta * 0.5)
 
-            genome.fitness += dist_reward * 2
+            genome.fitness += dist_reward * 3
 
             # reward for being over the platform (for landing), we try forcing the ship to land more in center by -/+20
             if platforms[1].platform_rect.left + 10 <= ship.x <= platforms[1].platform_rect.right - 10:
@@ -388,7 +388,7 @@ def eval_generation2(genomes, config):
                 angle_err = abs(angle - target_angle)
                 angle_reward = (1.0 - angle_err / 180.0) * ANGLE_REWARD_SCALE  # we map error to [0,1] & reward prop.
                 angle_reward = max(0.0, min(MAX_ANGLE_REWARD_FRAME, angle_reward))
-                genome.fitness += angle_reward * 3
+                genome.fitness += angle_reward * 10
             # ---------------------------------------------------------------------------------
 
             # if we enter blackholes radius we apply a small penalty
