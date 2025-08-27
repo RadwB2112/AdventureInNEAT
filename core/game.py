@@ -149,8 +149,9 @@ def set_obstacles(screen):
             elif event.key == pygame.K_b:
                 return "best_genome"
             elif event.key == pygame.K_r:
-                mouse_positions.pop()
-                counter -= 1
+                if mouse_positions:
+                    mouse_positions.pop()
+                    counter -= 1
 
     zeus(screen)
 
