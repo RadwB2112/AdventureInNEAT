@@ -95,3 +95,12 @@ This project is designed to be **highly configurable**. You can experiment with 
 
 > **Tip:** After making changes, use the **double `R` reload function in MENU** to apply them without restarting the project.
 
+
+## <p align="center">Gameplay / Project Demo</p>
+
+
+[![  First generations]()](https://drive.google.com/file/d/1vdO_--rXAnEbe-zt39iCA2vAM0qMBHI9/view?usp=sharing)  
+[![  Best genome]()](https://drive.google.com/file/d/1vdO_--rXAnEbe-zt39iCA2vAM0qMBHI9/view?usp=sharing)
+
+> note that for real life vertically landing you have to play with the angle/distance values and run for 100+ generations
+
