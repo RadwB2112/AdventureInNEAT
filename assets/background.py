@@ -73,8 +73,8 @@ def add_stele():
     global last_time, numar_stele_prezente
     if current_time_1 - last_time >= ADD_REMOVE_TIME:
         for _ in range(8):
-            xx = random.randint(0, 910)
-            yy = random.randint(0, 700)
+            xx = random.randint(0, SCREEN_WIDTH)
+            yy = random.randint(0, SCREEN_HEIGHT)
             stea_noua = stele(xx, yy)
             stars.append(stea_noua)
             last_time = current_time_1
